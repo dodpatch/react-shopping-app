@@ -1,0 +1,12 @@
+{
+  "name": "idoshop",
+  "displayName": "idoshop",
+  "expo": {
+    "name": "idoshop",
+    "slug": "idoshop",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
