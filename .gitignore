@@ -4,6 +4,7 @@
 
 # Xcode
 #
+ssh-git
 build/
 *.pbxuser
 !default.pbxuser
