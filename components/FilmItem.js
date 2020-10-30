@@ -1,33 +1,33 @@
 import React from 'react'
 import {View, Text, Image, StyleSheet} from 'react-native'
+import { getImageFromApi } from '../API/TMDBApi';
 class FilmItem extends React.Component{
     
     render(){ 
             const film = this.props.film
-            
-            console.log(film)
+            //console.log(film)
             return(
                 <View style={styles.main_container}>
                     <Image 
                     style={styles.image}
-                    source={{uri: "image"}}
+                    source={{uri: getImageFromApi(film.poster_path)}}
                     />
                     <View style={styles.content}>
-                    <View style={styles.header}>
-            <Text style={styles.title}>{film.title}</Text>
-            <Text style={styles.vote}>{film.vote}</Text>
+                        <View style={styles.header}>
+                            <Text style={styles.title}>{film.title}</Text>
+                            <Text style={styles.vote}>{film.vote_average}</Text>
+                        </View>
+                        <View style={styles.description}>
+                            <Text style={styles.description_text} numberOfLines={6}>{film.overview}</Text>
+                        </View>
+                        <View style={styles.date}>
+            <Text style={styles.date_text}>{film.release_date}</Text>
+                        </View>
                     </View>
-                    <View style={styles.description}>
-            <Text style={styles.description_text} numberOfLines={6}>{film.description}</Text>
-                    </View>
-                    <View style={styles.date}>
-            <Text style={styles.date_text}>{film.date}</Text>
-                    </View>
-                    </View>
-            </View>
+                </View>
             );
-            console.log('part2' + film)
-        // }
+           
+        
     }
    
 }
