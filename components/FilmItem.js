@@ -5,7 +5,7 @@ class FilmItem extends React.Component{
     
     render(){ 
             const film = this.props.film
-            //console.log(film)
+            console.log(this.props)
             return(
                 <View style={styles.main_container}>
                     <Image 
