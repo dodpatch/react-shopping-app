@@ -35,6 +35,6 @@ export default data =
         vote: 12,
         date: '31/12/1995',
         description: "Commodo labore sit esse non irure non proident."
-    },
+    }
     
 ]
